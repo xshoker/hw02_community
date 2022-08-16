@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1>{{ text }}</h1>
+    <a class="navbar-brand" href="{% url 'posts:index' %}">
+      Yatube для блогеров. Главная страница.
+    </a>
+{% if post.group %}   
+  <a href="{% url 'posts:group_list' post.group.slug %}">все записи группы</a>
+{% endif %} 
+  </body>
+</html> 
